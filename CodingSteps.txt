@@ -1,0 +1,39 @@
+Passos para a codificação do front-end do Santander Dev Week.
+Conferir o site glysns.gitbook.io/java-full-stack/ do professor do curso.
+
+
+- Instalação do Node.JS, baixando seu instalador do site oficial.
+Ele faz ser possível utilizar o JavaScript no back-end. Instala o npm junto.
+
+- Instalação do Angular com o comando: npm install -g @angular/cli
+Foi necessário permitir a execução de scripts no PowerShell. Para isso tive que fazer o comando
+Set-ExecutionPolicy Unrestricted no PowerShell com privilégios administrativos.
+Os comandos NG são do Angular. Devemos ter certeza que estamos na pasta certa no cmd.
+
+- Criação do projeto com o comando: ng new bankline-app (na pasta do projeto).
+Escolhido Y para rotas no projeto e escolhemos CSS em seguida. O Angular montará o projeto.
+
+- Como o Angular monta o projeto, já o publiquei no github como forma de backup também.
+
+- ng serve -o
+Esse comando executa o projeto e o exibe no browser no endereço localhost:4200.
+
+- A partir de agora inicia a construção do app em si. O professor deixou um passo a passo
+em seu site https://glysns.gitbook.io/java-full-stack/stack-angular/projeto.
+É necessário copiar e colar trechos de código para o VSCode, por isso é melhor seguir os passos lá.
+
+- O professor deletou quase toda a página. Deixou só os estilos e a toolbar, que alteramos o nome
+no app.component.html.
+
+- Segui os comandos até a parte de "Back-End CORS". Ele não executou os comandos desse tópico e
+foi direto para "Integrando com nossa API".
+Ele codificou até o tópico "Formatando campos na tela". Nesse momento o front-end não estava 
+mostrando os dados do BD e no browser dava erro de CORS. Ele pulou essa parte propositalmente
+para ensinar isso.
+Ele criou outro pacote no back-end chamado "config", com a classe "WebConfig.java" mostrada no tutorial.
+
+- A exibição da data e hora não ficou formatada como consta no 'movimentacao-list-component.html'.
+Para resolver isso, foi necessário colocar '@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")'
+acima da classe 'movimentacao.java', que está no pacote model da API.
+
+- Foi só seguir os passos do site do professor que tudo deu certo. Tudo documentado no site dele.
